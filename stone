@@ -1,0 +1,66 @@
+import java.util.Random;
+import java.util.Scanner;
+public class stone {
+
+	
+public static void main(String[] args) {
+
+	int a=4;
+	int b=2;
+do{    
+System.out.print("Choose stone,paper or scissor : ");    
+Scanner scan = new Scanner(System.in);
+
+String user = scan.nextLine();
+
+
+if (user.equals("stone")){
+	a=15;
+	
+	}
+if (user.equals("scissor")){
+	a=10;
+	
+	}
+if (user.equals("paper")){
+	a=5;
+	
+	}
+       
+       String[] arr={"stone", "paper", "scissor"};
+       Random r=new Random();        
+       int random=r.nextInt( arr.length);
+       System.out.println("computer's choice is "+arr[random]);
+
+       
+if(arr[random].equals("stone")){
+	b=15;
+
+}
+if(arr[random].equals("scissor")){
+	b=10;
+
+}
+if(arr[random].equals("paper")){
+	b=5;
+
+}
+if(a==15 && b==5){
+	System.out.println("you lose");
+}
+else if(a>b){
+	System.out.println("You won now get your "+user+ " with you.");
+}
+
+
+if(a==5 && b==15){
+	System.out.println("You won now get your "+user+ " with you.");
+}
+else if(a<b){
+	System.out.println("You lose");
+	}
+}while(a==b);
+
+
+}
+}
