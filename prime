@@ -13,7 +13,7 @@ int main()
     cout<<"\nSmallest prime number is :: 2";
   }
 
-  for(i=2;i<n;i++)
+  for(i=2;i<n/2+1;i++)
   {
       if(n%i==0)
       {
