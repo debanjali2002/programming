@@ -1,0 +1,38 @@
+import java.util.Random;
+import java.util.Scanner;
+public class sevenup{
+public static void main(String[] args){
+	int c;
+do{	
+	System.out.print("choose seven up or down: ");    
+	Scanner scan = new Scanner(System.in);
+	String user = scan.nextLine();
+	
+ 	int[] arr={1,2,3,4,5,6};
+       Random r=new Random();        
+       int firstdice=r.nextInt( arr.length);
+       System.out.println(arr[firstdice]);
+	 int secdice=r.nextInt( arr.length);
+	System.out.println(" "+arr[secdice]);
+	c = arr[firstdice]+arr[secdice];
+
+if (user.equals("up")){
+	
+	if(c>7){
+	System.out.println("you won");
+	}else{System.out.println("you lose");}
+
+}
+
+if (user.equals("down")){
+
+	if(c<7){
+	System.out.println("you won");
+	}else{System.out.println("you lose");}
+
+}
+
+}while(c==7);
+}
+
+}
